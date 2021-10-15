@@ -13,4 +13,19 @@ sudo jpm install https://github.com/MorganPeterson/args.git
 
 ## examples
 
-See the examples directory for example uses of the module.
+Run simple.janet script for an example of usage.
+
+```sh
+janet simple.janet -a -b -cd -x --help
+```
+
+The above should produce the following output:
+
+```
+A flag found
+B flag found
+C flag found
+D flag found
+don't recognize flag x
+help message
+```
