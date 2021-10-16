@@ -1,6 +1,6 @@
 # Args
 
-Args is a simple (33 sloc) pure Janet module for parsing command line flags.
+Args is a simple (42 sloc) pure Janet module for parsing command line flags.
 
 Unlike argparse and it's ilk, this module only parses flags without arguments.
 
