@@ -40,7 +40,9 @@
             (array/push b (string/from-bytes x)))
         (cond
           (true? kpwh) (array/push results (string/join b))
-          (array/concat results b)))))
+          (do
+            (array/concat results b)
+            (set kpwh false))))))
   results)
 
 (defn flags
