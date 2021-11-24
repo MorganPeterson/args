@@ -35,14 +35,15 @@
         (array/push results (string/join a)))
       (do
         (var b @[])
-        (array/push b (string/from-bytes args0))
-        (loop [x :in f :until (or (= x spce) (not (fiber/can-resume? f)))]
+        (when (not (nil? args0))
+          (array/push b (string/from-bytes args0))
+          (loop [x :in f :until (or (= x spce) (not (fiber/can-resume? f)))]
             (array/push b (string/from-bytes x)))
-        (cond
-          (true? kpwh) (array/push results (string/join b))
-          (do
-            (array/concat results b)
-            (set kpwh false))))))
+          (cond
+            (true? kpwh) (array/push results (string/join b))
+            (do
+              (array/concat results b)
+              (set kpwh false)))))))
   results)
 
 (defn flags
