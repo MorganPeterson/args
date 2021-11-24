@@ -1,5 +1,5 @@
 (defn- to-byte
-  "convert char to byte"
+  "convert chars to byte and only return first result"
   [x]
   (get (string/bytes x) 0))
 
