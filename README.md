@@ -1,3 +1,7 @@
+# NOTICE
+
+__I am moving this repository to [Sourcehut](https://git.sr.ht/~nullevoid/args) and this repository will be archived. Any future development (if any) will be done in the new repository.__
+
 # Args
 
 Args is a simple (44 sloc) pure Janet module for parsing command line flags.
